@@ -1,0 +1,96 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/Index/index",
+			"style": {
+				"navigationBarTitleText": "商城"
+			}
+		},
+		{
+			"path": "pages/Classify/classify",
+			"style": {
+				"navigationBarTitleText": "分类"
+			}
+
+		},
+		{
+			"path": "pages/Search/search",
+			"style": {
+				"navigationBarTitleText": "购物车"
+			}
+		},
+		{
+			"path": "pages/Me/me",
+			"style": {
+				"navigationBarTitleText": "我的"
+			}
+		}
+    ],
+	"subPackages": [{ //分包 加载配置固定subPackages
+		"root": "subpkg", //分包文件名字
+		"pages": [{ //分包底下的路径
+			"path": "goods/goods",
+			"style": {
+				"onReachBottomDistance": 150 ,//添加下拉触底事件 用于加载页数
+				"enablePullDownRefresh":true ,//开启下拉刷新
+				"backgroundColor":"#F8F8F8"
+			}
+
+		}, {
+			"path": "searchs/searchs",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}    ,{
+                    "path" : "goods_list/goods_list",
+                    "style" :                                                                                    
+                {
+                    "navigationBarTitleText": "",
+                    "enablePullDownRefresh": false
+                }
+                
+                }
+            ]
+	}],
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#aa0000",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		//底部导航栏配置
+		"color": "#BFBFBF",
+		"selectedColor": "#515151",
+		"borderStyle": "black",
+		"backgroundColor": "#FFFFFF",
+		//tabBar项目列表
+		"list": [{
+				"pagePath": "pages/Index/index",
+				"text": "首页",
+				"iconPath": "./static/tabbar/2.png",
+				"selectedIconPath": "./static/tabbar/1.png"
+			},
+			{
+				"pagePath": "pages/Classify/classify",
+				"text": "分类",
+				"iconPath": "./static/tabbar/3.png",
+				"selectedIconPath": "./static/tabbar/4.png"
+			},
+			{
+				"pagePath": "pages/Search/search",
+				"text": "购物车",
+				"iconPath": "./static/tabbar/5.png",
+				"selectedIconPath": "./static/tabbar/6.png"
+			},
+			{
+				"pagePath": "pages/Me/me",
+				"text": "我的",
+				"iconPath": "./static/tabbar/7.png",
+				"selectedIconPath": "./static/tabbar/8.png"
+			}
+		]
+	}
+}

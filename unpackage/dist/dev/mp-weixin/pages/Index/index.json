@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "商城",
+  "usingComponents": {
+    "my-search": "/components/my-search/my-search"
+  }
+}
