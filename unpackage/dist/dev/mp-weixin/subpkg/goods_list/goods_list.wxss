@@ -63,4 +63,13 @@ swiper image.data-v-62032d4c {
   font-size: 12px;
   color: gray;
 }
+.goods_nav.data-v-62032d4c {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.goods-tetail.data-v-62032d4c {
+  padding-bottom: 50px;
+}
 

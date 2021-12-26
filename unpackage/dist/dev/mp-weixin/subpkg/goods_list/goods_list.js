@@ -1,9 +1,9 @@
 (global["webpackJsonp"] = global["webpackJsonp"] || []).push([["subpkg/goods_list/goods_list"],{
 
 /***/ 58:
-/*!***************************************************************************************!*\
-  !*** D:/hbuilderX---练习/Movie App/main.js?{"page":"subpkg%2Fgoods_list%2Fgoods_list"} ***!
-  \***************************************************************************************/
+/*!**************************************************************************************!*\
+  !*** D:/hbuilderX---练习/MoverApp/main.js?{"page":"subpkg%2Fgoods_list%2Fgoods_list"} ***!
+  \**************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17,9 +17,9 @@ createPage(_goods_list.default);
 /***/ }),
 
 /***/ 59:
-/*!********************************************************************!*\
-  !*** D:/hbuilderX---练习/Movie App/subpkg/goods_list/goods_list.vue ***!
-  \********************************************************************/
+/*!*******************************************************************!*\
+  !*** D:/hbuilderX---练习/MoverApp/subpkg/goods_list/goods_list.vue ***!
+  \*******************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -58,9 +58,9 @@ component.options.__file = "subpkg/goods_list/goods_list.vue"
 /***/ }),
 
 /***/ 60:
-/*!***************************************************************************************************************!*\
-  !*** D:/hbuilderX---练习/Movie App/subpkg/goods_list/goods_list.vue?vue&type=template&id=62032d4c&scoped=true& ***!
-  \***************************************************************************************************************/
+/*!**************************************************************************************************************!*\
+  !*** D:/hbuilderX---练习/MoverApp/subpkg/goods_list/goods_list.vue?vue&type=template&id=62032d4c&scoped=true& ***!
+  \**************************************************************************************************************/
 /*! exports provided: render, staticRenderFns, recyclableRender, components */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -80,9 +80,9 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 61:
-/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--16-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!D:/hbuilderX---练习/Movie App/subpkg/goods_list/goods_list.vue?vue&type=template&id=62032d4c&scoped=true& ***!
-  \***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--16-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!D:/hbuilderX---练习/MoverApp/subpkg/goods_list/goods_list.vue?vue&type=template&id=62032d4c&scoped=true& ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns, recyclableRender, components */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -97,6 +97,9 @@ try {
   components = {
     uniIcons: function() {
       return Promise.all(/*! import() | uni_modules/uni-icons/components/uni-icons/uni-icons */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uni-icons/components/uni-icons/uni-icons")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uni-icons/components/uni-icons/uni-icons.vue */ 91))
+    },
+    uniGoodsNav: function() {
+      return Promise.all(/*! import() | uni_modules/uni-goods-nav/components/uni-goods-nav/uni-goods-nav */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uni-goods-nav/components/uni-goods-nav/uni-goods-nav")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uni-goods-nav/components/uni-goods-nav/uni-goods-nav.vue */ 106))
     }
   }
 } catch (e) {
@@ -130,9 +133,9 @@ render._withStripped = true
 /***/ }),
 
 /***/ 62:
-/*!*********************************************************************************************!*\
-  !*** D:/hbuilderX---练习/Movie App/subpkg/goods_list/goods_list.vue?vue&type=script&lang=js& ***!
-  \*********************************************************************************************/
+/*!********************************************************************************************!*\
+  !*** D:/hbuilderX---练习/MoverApp/subpkg/goods_list/goods_list.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -146,9 +149,9 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 63:
-/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!D:/hbuilderX---练习/Movie App/subpkg/goods_list/goods_list.vue?vue&type=script&lang=js& ***!
-  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!D:/hbuilderX---练习/MoverApp/subpkg/goods_list/goods_list.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -185,12 +188,39 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 var _default =
 {
   data: function data() {
     return {
       // 商品详情对象
-      goods_info: {} };
+      goods_info: {}, //空对象会导致初次渲染页面时导致商品价格商品名字闪烁undenfand
+      options: [{
+        icon: 'shop',
+        text: '店铺',
+        infoBackgroundColor: '#007aff',
+        infoColor: "red" },
+      {
+        icon: 'cart',
+        text: '购物车',
+        info: 5 }],
+
+      buttonGroup: [{
+        text: '加入购物车',
+        backgroundColor: '#ff0000',
+        color: '#fff' },
+
+      {
+        text: '立即购买',
+        backgroundColor: '#ffa200',
+        color: '#fff' }] };
+
+
 
   },
   onLoad: function onLoad(options) {
@@ -202,26 +232,41 @@ var _default =
   methods: {
     // 定义请求商品详情数据的方法
     getGoodsDetail: function getGoodsDetail(goods_id) {var _this = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var _yield$uni$$http$get, res;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:_context.next = 2;return (
-                  uni.$http.get('/api/public/v1/goods/detail', { goods_id: goods_id }));case 2:_yield$uni$$http$get = _context.sent;res = _yield$uni$$http$get.data;if (!(
+
+
+                  uni.$http.get('/api/public/v1/goods/detail', {
+                    goods_id: goods_id }));case 2:_yield$uni$$http$get = _context.sent;res = _yield$uni$$http$get.data;if (!(
+
                 res.meta.status !== 200)) {_context.next = 6;break;}return _context.abrupt("return", uni.$showMsg());case 6:
+                // 解决rich-text底部空白问题 replace 表示替换
+                res.message.goods_introduce = res.message.goods_introduce.replace(/<img /g,
+                '<img style="display:block;" ').replace(/webp/g, 'jpg');
                 // 为 data 中的数据赋值
                 _this.goods_info = res.message;
-                console.log(res.message, '6969');case 8:case "end":return _context.stop();}}}, _callee);}))();
+                console.log(res.message, '6969');case 9:case "end":return _context.stop();}}}, _callee);}))();
     },
     preview: function preview(i) {
       uni.previewImage({ //图片预览功能
         current: i, //预览时默认图片索引放大
         urls: this.goods_info.pics.map(function (x) {return x.pics_big;}) //所有图片url地址的数据
       });
+    },
+    onClick: function onClick(e) {
+      console.log(e, '555');
+      if (e.content.text === '购物车') {
+        uni.switchTab({
+          url: '/pages/Search/search' });
+
+      }
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 
 /***/ 64:
-/*!******************************************************************************************************************************!*\
-  !*** D:/hbuilderX---练习/Movie App/subpkg/goods_list/goods_list.vue?vue&type=style&index=0&id=62032d4c&scoped=true&lang=scss& ***!
-  \******************************************************************************************************************************/
+/*!*****************************************************************************************************************************!*\
+  !*** D:/hbuilderX---练习/MoverApp/subpkg/goods_list/goods_list.vue?vue&type=style&index=0&id=62032d4c&scoped=true&lang=scss& ***!
+  \*****************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -235,9 +280,9 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 65:
-/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js??ref--8-oneOf-1-0!./node_modules/css-loader/dist/cjs.js??ref--8-oneOf-1-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--8-oneOf-1-2!./node_modules/postcss-loader/src??ref--8-oneOf-1-3!./node_modules/sass-loader/dist/cjs.js??ref--8-oneOf-1-4!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--8-oneOf-1-5!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!D:/hbuilderX---练习/Movie App/subpkg/goods_list/goods_list.vue?vue&type=style&index=0&id=62032d4c&scoped=true&lang=scss& ***!
-  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js??ref--8-oneOf-1-0!./node_modules/css-loader/dist/cjs.js??ref--8-oneOf-1-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--8-oneOf-1-2!./node_modules/postcss-loader/src??ref--8-oneOf-1-3!./node_modules/sass-loader/dist/cjs.js??ref--8-oneOf-1-4!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--8-oneOf-1-5!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!D:/hbuilderX---练习/MoverApp/subpkg/goods_list/goods_list.vue?vue&type=style&index=0&id=62032d4c&scoped=true&lang=scss& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
