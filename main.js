@@ -1,4 +1,5 @@
 import App from './App'
+import store from '@/store/store.js'
 //1. 按需导入 $http 对象  导入网络请求第三方的包
 import { $http } from '@escook/request-miniprogram'
 
@@ -36,6 +37,7 @@ Vue.config.productionTip = false
 App.mpType = 'app'
 const app = new Vue({
     ...App,
+	store
 })
 app.$mount()
 // #endif

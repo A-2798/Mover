@@ -8,8 +8,9 @@
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(uni, createApp) {__webpack_require__(/*! uni-pages */ 5);var _App = _interopRequireDefault(__webpack_require__(/*! ./App */ 6));
+var _store = _interopRequireDefault(__webpack_require__(/*! @/store/store.js */ 12));
 
-var _requestMiniprogram = __webpack_require__(/*! @escook/request-miniprogram */ 12);
+var _requestMiniprogram = __webpack_require__(/*! @escook/request-miniprogram */ 15);
 
 
 
@@ -44,7 +45,8 @@ uni.$http = _requestMiniprogram.$http; //3.请求拦截器 请求开始之前做
 _requestMiniprogram.$http.beforeRequest = function (options) {uni.showLoading({ title: '数据加载中。。。' });}; //4.响应拦截器 请求完成之后做一些事情
 _requestMiniprogram.$http.afterRequest = function () {uni.hideLoading();}; //5. 配置轮播图请求的根路径
 _requestMiniprogram.$http.baseUrl = 'https://www.uinav.com'; //6.封装弹窗方法
-uni.showMsg = function () {var title = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '数据请求失败!';var duration = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 2000;uni.showToast({ title: title, duration: duration, icon: 'none' });};_vue.default.config.productionTip = false;_App.default.mpType = 'app';var app = new _vue.default(_objectSpread({}, _App.default));
+uni.showMsg = function () {var title = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '数据请求失败!';var duration = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 2000;uni.showToast({ title: title, duration: duration, icon: 'none' });};_vue.default.config.productionTip = false;_App.default.mpType = 'app';var app = new _vue.default(_objectSpread(_objectSpread({}, _App.default), {}, {
+  store: _store.default }));
 
 createApp(app).$mount();
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["createApp"]))
