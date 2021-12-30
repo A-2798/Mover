@@ -128,25 +128,29 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-//
-//
-//
-var _default =
-{
-  data: function data() {
-    return {
-      title: 'seach' };
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
 
-  },
-  onLoad: function onLoad() {
 
-  },
+
+
+
+
+
+
+
+
+var _tabbarBadge = _interopRequireDefault(__webpack_require__(/*! @/mixins/tabbar-badge.js */ 41));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} //
+//
+//
+//
+//
+//
+//
+//
+//
+// 导入自己封装的 mixin 模块
+var _default = { // 将 badgeMix 混入到当前的页面中进行使用
+  mixins: [_tabbarBadge.default], data: function data() {return {};}, computed: {}, onShow: function onShow() {},
   methods: {} };exports.default = _default;
 
 /***/ })
