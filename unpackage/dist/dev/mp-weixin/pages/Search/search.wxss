@@ -24,38 +24,15 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.goods-item.data-v-8c45c4b8 {
-  display: flex;
-  padding: 10px 5px;
-  border-bottom: 1px solid #F0F0F0;
-}
-.goods-item .goods-item-left.data-v-8c45c4b8 {
-  margin-right: 5px;
+.cart-title.data-v-37b200a6 {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  height: 40px;
+  padding-left: 5px;
+  border-bottom: 1px solid #EFEFEF;
 }
-.goods-item .goods-item-left .goods-pic.data-v-8c45c4b8 {
-  width: 100px;
-  height: 100px;
-  display: block;
-}
-.goods-item .goods-item-right.data-v-8c45c4b8 {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.goods-item .goods-item-right .goods-name.data-v-8c45c4b8 {
-  font-size: 13px;
-}
-.goods-item .goods-item-right .goods-info-box.data-v-8c45c4b8 {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.goods-item .goods-item-right .goods-info-box .goods-price.data-v-8c45c4b8 {
-  font-size: 16px;
-  color: #c00000;
+.cart-title .cart-text.data-v-37b200a6 {
+  font-size: 14px;
+  margin-left: 10px;
 }
 

@@ -24,38 +24,44 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.goods-item.data-v-8c45c4b8 {
+.uni-numbox.data-v-dd94a2a8 {
   display: flex;
-  padding: 10px 5px;
-  border-bottom: 1px solid #F0F0F0;
+  flex-direction: row;
 }
-.goods-item .goods-item-left.data-v-8c45c4b8 {
-  margin-right: 5px;
+.uni-numbox-btns.data-v-dd94a2a8 {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  padding: 0 8px;
+  background-color: #f5f5f5;
 }
-.goods-item .goods-item-left .goods-pic.data-v-8c45c4b8 {
-  width: 100px;
-  height: 100px;
-  display: block;
+.uni-numbox__value.data-v-dd94a2a8 {
+  margin: 0 2px;
+  background-color: #f5f5f5;
+  width: 40px;
+  height: 26px;
+  text-align: center;
+  font-size: 14px;
+  border-left-width: 0;
+  border-right-width: 0;
+  color: #333;
 }
-.goods-item .goods-item-right.data-v-8c45c4b8 {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  justify-content: space-between;
+.uni-numbox__minus.data-v-dd94a2a8 {
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
 }
-.goods-item .goods-item-right .goods-name.data-v-8c45c4b8 {
-  font-size: 13px;
+.uni-numbox__plus.data-v-dd94a2a8 {
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
 }
-.goods-item .goods-item-right .goods-info-box.data-v-8c45c4b8 {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.uni-numbox--text.data-v-dd94a2a8 {
+  line-height: 20px;
+  font-size: 20px;
+  font-weight: 300;
+  color: #333;
 }
-.goods-item .goods-item-right .goods-info-box .goods-price.data-v-8c45c4b8 {
-  font-size: 16px;
-  color: #c00000;
+.uni-numbox .uni-numbox--disabled.data-v-dd94a2a8 {
+  color: #c0c0c0 !important;
 }
 

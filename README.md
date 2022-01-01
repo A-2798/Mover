@@ -1,2 +1,0 @@
-# Mover
-uniapp商城
