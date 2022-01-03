@@ -25,6 +25,8 @@
 /* 透明度 */
 /* 文章场景相关 */
 .goods-item.data-v-8c45c4b8 {
+  width: 750rpx;
+  box-sizing: border-box;
   display: flex;
   padding: 10px 5px;
   border-bottom: 1px solid #F0F0F0;

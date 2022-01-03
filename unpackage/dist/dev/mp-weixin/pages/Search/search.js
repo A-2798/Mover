@@ -95,11 +95,20 @@ __webpack_require__.r(__webpack_exports__);
 var components
 try {
   components = {
+    myAddres: function() {
+      return __webpack_require__.e(/*! import() | components/my-addres/my-addres */ "components/my-addres/my-addres").then(__webpack_require__.bind(null, /*! @/components/my-addres/my-addres.vue */ 162))
+    },
     uniIcons: function() {
       return Promise.all(/*! import() | uni_modules/uni-icons/components/uni-icons/uni-icons */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uni-icons/components/uni-icons/uni-icons")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uni-icons/components/uni-icons/uni-icons.vue */ 79))
     },
+    uniSwipeAction: function() {
+      return __webpack_require__.e(/*! import() | uni_modules/uni-swipe-action/components/uni-swipe-action/uni-swipe-action */ "uni_modules/uni-swipe-action/components/uni-swipe-action/uni-swipe-action").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-swipe-action/components/uni-swipe-action/uni-swipe-action.vue */ 87))
+    },
+    uniSwipeActionItem: function() {
+      return Promise.all(/*! import() | uni_modules/uni-swipe-action/components/uni-swipe-action-item/uni-swipe-action-item */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uni-swipe-action/components/uni-swipe-action-item/uni-swipe-action-item")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uni-swipe-action/components/uni-swipe-action-item/uni-swipe-action-item.vue */ 92))
+    },
     myGoods: function() {
-      return __webpack_require__.e(/*! import() | components/my-goods/my-goods */ "components/my-goods/my-goods").then(__webpack_require__.bind(null, /*! @/components/my-goods/my-goods.vue */ 87))
+      return __webpack_require__.e(/*! import() | components/my-goods/my-goods */ "components/my-goods/my-goods").then(__webpack_require__.bind(null, /*! @/components/my-goods/my-goods.vue */ 105))
     }
   }
 } catch (e) {
@@ -174,6 +183,12 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 
+
+
+
+
+
+
 var _tabbarBadge = _interopRequireDefault(__webpack_require__(/*! @/mixins/tabbar-badge.js */ 25));
 var _vuex = __webpack_require__(/*! vuex */ 13);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var _default =
 
@@ -186,13 +201,20 @@ var _vuex = __webpack_require__(/*! vuex */ 13);function _interopRequireDefault(
   (0, _vuex.mapState)('m_cart', ['cart'])),
 
   data: function data() {
-    return {};
+    return {
+      options: [{
+        text: '删除', // 显示的文本内容
+        style: {
+          backgroundColor: '#C00000' // 按钮的背景颜色
+        } }] };
+
+
   },
   onShow: function onShow() {
 
   },
   methods: _objectSpread(_objectSpread({},
-  (0, _vuex.mapMutations)('m_cart', ['updateGoodsState', 'updateGoodsCount'])), {}, {
+  (0, _vuex.mapMutations)('m_cart', ['updateGoodsState', 'updateGoodsCount', 'removeGoodsById'])), {}, {
     // 商品的勾选状态发生了变化
     radioChangeHandler: function radioChangeHandler(e) {
       this.updateGoodsState(e);
@@ -200,6 +222,10 @@ var _vuex = __webpack_require__(/*! vuex */ 13);function _interopRequireDefault(
     // 商品的数量发生了变化
     numberChangeHandler: function numberChangeHandler(e) {
       this.updateGoodsCount(e);
+    },
+    // 点击了滑动操作按钮
+    swipeActionClickHandler: function swipeActionClickHandler(goods) {
+      this.removeGoodsById(goods.goods_id);
     } }) };exports.default = _default;
 
 /***/ }),

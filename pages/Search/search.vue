@@ -1,5 +1,6 @@
 <template>
 	<view>
+		<my-addres class=""> </my-addres>
 		<view class="cart-title">
 			<!-- 右侧的图标 -->
 			<uni-icons type="shop" size="18"></uni-icons>
@@ -7,10 +8,15 @@
 			<text class="cart-text">购物车</text>
 		</view>
 		<!-- 循环渲染购物车中的商品信息 -->
-		<block v-for="(goods, i) in cart" :key="i">
-			<my-goods :goods="goods" :show-radio="true" :show-num="true" @radio-change="radioChangeHandler"
-				@num-change="numberChangeHandler"></my-goods>
-		</block>
+		<!-- uni-swipe-action 是最外层包裹性质的容器 -->
+		<uni-swipe-action>
+			<block v-for="(goods, i) in cart" :key="i">
+				<uni-swipe-action-item  :right-options="options" @click="swipeActionClickHandler(goods)">
+					<my-goods :goods="goods" :show-radio="true" :show-num="true" @radio-change="radioChangeHandler"
+						@num-change="numberChangeHandler"></my-goods>
+				</uni-swipe-action-item>
+			</block>
+		</uni-swipe-action>
 	</view>
 </template>
 
@@ -28,13 +34,20 @@
 			...mapState('m_cart', ['cart'])
 		},
 		data() {
-			return {}
+			return {
+				options: [{
+					text: '删除', // 显示的文本内容
+					style: {
+						backgroundColor: '#C00000' // 按钮的背景颜色
+					}
+				}]
+			}
 		},
 		onShow() {
 
 		},
 		methods: {
-			...mapMutations('m_cart', ['updateGoodsState', 'updateGoodsCount']),
+			...mapMutations('m_cart', ['updateGoodsState', 'updateGoodsCount', 'removeGoodsById']),
 			// 商品的勾选状态发生了变化
 			radioChangeHandler(e) {
 				this.updateGoodsState(e)
@@ -42,6 +55,10 @@
 			// 商品的数量发生了变化
 			numberChangeHandler(e) {
 				this.updateGoodsCount(e)
+			},
+			// 点击了滑动操作按钮
+			swipeActionClickHandler(goods) {
+				 this.removeGoodsById(goods.goods_id)
 			}
 		}
 	}
