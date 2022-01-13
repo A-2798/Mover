@@ -1,5 +1,5 @@
 <template>
-	<view>
+	<view class="search">
 		<my-addres class=""> </my-addres>
 		<view class="cart-title">
 			<!-- 右侧的图标 -->
@@ -17,6 +17,9 @@
 				</uni-swipe-action-item>
 			</block>
 		</uni-swipe-action>
+		
+		<!-- 结算区域 -->
+		<my-settle></my-settle>
 	</view>
 </template>
 
@@ -65,6 +68,9 @@
 </script>
 
 <style scoped lang="scss">
+	.search{
+		padding-bottom: 50px;
+	}
 	.cart-title {
 		display: flex;
 		align-items: center;

@@ -10,7 +10,7 @@
 /* WEBPACK VAR INJECTION */(function(uni, createApp) {__webpack_require__(/*! uni-pages */ 5);var _App = _interopRequireDefault(__webpack_require__(/*! ./App */ 6));
 var _store = _interopRequireDefault(__webpack_require__(/*! @/store/store.js */ 12));
 
-var _requestMiniprogram = __webpack_require__(/*! @escook/request-miniprogram */ 15);
+var _requestMiniprogram = __webpack_require__(/*! @escook/request-miniprogram */ 16);
 
 
 

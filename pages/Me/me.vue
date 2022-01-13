@@ -1,8 +1,7 @@
 <template>
-	<view class="content">
-		<image class="logo" src="/static/logo.png"></image>
-		<view class="text-area">
-			<text class="title">{{title}}</text>
+	<view class="contnt">
+		<view class="uniui-paperclip">
+		211333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333335666666666666666666666666666666666666666666666666666666666666666666666666666666667
 		</view>
 	</view>
 </template>
@@ -15,7 +14,7 @@
 	  mixins: [badgeMix],
 		data() {
 			return {
-				title: 'me'
+				
 			}
 		},
 		onLoad() {
@@ -27,6 +26,16 @@
 	}
 </script>
 
-<style>
+<style scoped lang="scss">
+	.contnt{
+		background: red;
+		width: 200px;
+		height: 200px;
+		min-width: 220px;
+		.uniui-paperclip{
+		
+			background: yellow;
+		}
+	}
 	
 </style>
