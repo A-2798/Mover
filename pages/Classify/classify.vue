@@ -2,7 +2,7 @@
 	<view>
 		<!-- 自定义组件 之后 可以动态更改组件中的bgcolor radius 如果没有会执行组件中的配置 -->
 		<my-search :bgcolor=" '#C00000' " :radius="30" @myclick="searchBox"></my-search>
-		
+
 		<view class="scroll-view-container">
 			<!-- 左侧滑动区域 -->
 			<scroll-view class="left-scroll-view" scroll-y="true" :style="{ height:wh + 'px' }">
@@ -34,8 +34,8 @@
 	// 导入自己封装的 mixin 模块
 	import badgeMix from '@/mixins/tabbar-badge.js'
 	export default {
-	  // 将 badgeMix 混入到当前的页面中进行使用
-	  mixins: [badgeMix],
+		// 将 badgeMix 混入到当前的页面中进行使用
+		mixins: [badgeMix],
 		data() {
 			return {
 				wh: 0, //动态获取当前屏幕可用高度
@@ -81,14 +81,14 @@
 					url: '/subpkg/goods/goods?cid=' + item.cat_id
 				})
 			},
-			searchBox(){
+			searchBox() {
 				uni.navigateTo({
-					url:'/subpkg/searchs/searchs'
+					url: '/subpkg/searchs/searchs'
 				})
 			},
-			
+
 		}
-	} 
+	}
 </script>
 
 <style scoped lang="scss">

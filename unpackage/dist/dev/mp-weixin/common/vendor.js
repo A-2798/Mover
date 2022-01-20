@@ -4318,6 +4318,13 @@ module.exports = JSON.parse("{\"uni-search-bar.cancel\":\"cancel\",\"uni-search-
       state.cart = state.cart.filter(function (x) {return x.goods_id !== goods_id;});
       // 持久化存储到本地
       this.commit('m_cart/saveToStorage');
+    },
+    // 更新所有商品的勾选状态
+    updateAllGoodsState: function updateAllGoodsState(state, newState) {
+      // 循环更新购物车中每件商品的勾选状态
+      state.cart.forEach(function (x) {return x.goods_state = newState;});
+      // 持久化存储到本地
+      this.commit('m_cart/saveToStorage');
     } },
 
 
@@ -4326,10 +4333,11 @@ module.exports = JSON.parse("{\"uni-search-bar.cancel\":\"cancel\",\"uni-search-
   getters: {
     // 统计购物车中商品的总数量
     total: function total(state) {
-      var c = 0;
+      // let c = 0
       // 循环统计商品的数量，累加到变量 c 中
-      state.cart.forEach(function (goods) {return c += goods.goods_count;});
-      return c;
+      // state.cart.forEach(goods => c += goods.goods_count)
+      // return c
+      return state.cart.reduce(function (total, item) {return total += item.goods_count;}, 0);
     },
     // 勾选的商品的总数量
     checkedCount: function checkedCount(state) {
@@ -4337,6 +4345,16 @@ module.exports = JSON.parse("{\"uni-search-bar.cancel\":\"cancel\",\"uni-search-
       // 再使用 reduce 方法，将已勾选的商品总数量进行累加
       // reduce() 的返回值就是已勾选的商品的总数量
       return state.cart.filter(function (x) {return x.goods_state;}).reduce(function (total, item) {return total += item.goods_count;}, 0);
+    },
+    // 已勾选的商品的总价
+    checkedGoodsAmount: function checkedGoodsAmount(state) {
+      // 先使用 filter 方法，从购物车中过滤器已勾选的商品
+      // 再使用 reduce 方法，将已勾选的商品数量 * 单价之后，进行累加
+      // reduce() 的返回值就是已勾选的商品的总价
+      // 最后调用 toFixed(2) 方法，保留两位小数
+      return state.cart.filter(function (x) {return x.goods_state;}).
+      reduce(function (total, item) {return total += item.goods_count * item.goods_price;}, 0).
+      toFixed(2);
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
@@ -5361,6 +5379,13 @@ if (hadRuntime) {
 var _default = {
   computed: _objectSpread({},
   (0, _vuex.mapGetters)('m_cart', ['total'])),
+
+  watch: {
+    // 监听 total 值的变化
+    total: function total() {
+      // 调用 methods 中的 setBadge 方法，重新为 tabBar 的数字徽章赋值
+      this.setBadge();
+    } },
 
   onShow: function onShow() {
     // 在页面刚展示的时候，设置数字徽标

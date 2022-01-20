@@ -38,4 +38,19 @@
   font-size: 14px;
   margin-left: 10px;
 }
+.empty-cart.data-v-37b200a6 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 150px;
+}
+.empty-cart .empty-img.data-v-37b200a6 {
+  width: 90px;
+  height: 90px;
+}
+.empty-cart .tip-text.data-v-37b200a6 {
+  font-size: 12px;
+  color: gray;
+  margin-top: 15px;
+}
 

@@ -144,13 +144,20 @@ var _vuex = __webpack_require__(/*! vuex */ 13);function ownKeys(object, enumera
   },
   computed: _objectSpread(_objectSpread({},
 
-  (0, _vuex.mapGetters)('m_cart', ['checkedCount', 'total'])), {}, {
+  (0, _vuex.mapGetters)('m_cart', ['total', 'checkedCount', 'checkedGoodsAmount'])), {}, {
     // 2. 是否全选
     isFullCheck: function isFullCheck() {
       return this.total === this.checkedCount;
     } }),
 
-  methods: {} };exports.default = _default;
+  methods: _objectSpread(_objectSpread({},
+  (0, _vuex.mapMutations)('m_cart', ['updateAllGoodsState'])), {}, {
+    // label 的点击事件处理函数
+    changeAllState: function changeAllState() {
+      // 修改购物车中所有商品的选中状态
+      // !this.isFullCheck 表示：当前全选按钮的状态取反之后，就是最新的勾选状态
+      this.updateAllGoodsState(!this.isFullCheck);
+    } }) };exports.default = _default;
 
 /***/ }),
 

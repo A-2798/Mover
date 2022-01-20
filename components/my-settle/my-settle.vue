@@ -2,13 +2,13 @@
 	<!-- 最外层的容器 -->
 	<view class="my-settle-container">
 		<!-- 全选区域 -->
-		<label class="radio">
+		<label class="radio" @click="changeAllState">
 			<radio color="#C00000" :checked="isFullCheck" /><text>全选</text>
 		</label>
 
 		<!-- 合计区域 -->
 		<view class="amount-box">
-			合计:<text class="amount">￥1234.00</text>
+			合计:<text class="amount">￥{{checkedGoodsAmount}}</text>
 		</view>
 
 		<!-- 结算按钮 -->
@@ -18,7 +18,7 @@
 
 <script>
 	import {
-		mapGetters
+		mapGetters,mapMutations
 	} from 'vuex'
 	export default {
 		data() {
@@ -28,14 +28,20 @@
 		},
 		computed: {
 			// 1. 将 total 映射到当前组件中
-			...mapGetters('m_cart', ['checkedCount', 'total']),
+			...mapGetters('m_cart', ['total', 'checkedCount', 'checkedGoodsAmount']),
 			// 2. 是否全选
 			isFullCheck() {
 				return this.total === this.checkedCount
 			},
 		},
 		methods: {
-
+		...mapMutations('m_cart', ['updateAllGoodsState']),
+		 // label 的点击事件处理函数
+		  changeAllState() {
+		    // 修改购物车中所有商品的选中状态
+		    // !this.isFullCheck 表示：当前全选按钮的状态取反之后，就是最新的勾选状态
+		    this.updateAllGoodsState(!this.isFullCheck)
+		  }
 		}
 	}
 </script>
